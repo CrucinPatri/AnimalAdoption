@@ -21,6 +21,6 @@ public class ServiceAnimal {
     }
 
     public void deleteById(Long id) {
-        repositoryAnimal.delete(id);
+        repositoryAnimal.deleteById(id);
     }
 }
