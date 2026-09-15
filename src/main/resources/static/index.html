@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Centru de Adopții - Bun venit</title>
+    <!-- Legătura curată către fișierul CSS separat -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="animated-text" id="text-animat"></h1>
+
+<div class="buttons-container">
+    <a href="login.html" class="btn btn-login">Log In</a>
+    <a href="signin.html" class="btn btn-signin">Sign In</a>
+</div>
+
+<script>
+    const text = "Găsește-ți un prieten pe viață! Adoptă, nu cumpăra.";
+    const container = document.getElementById('text-animat');
+
+    text.split("").forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char === " " ? "\u00A0" : char;
+        span.style.animationDelay = `${index * 0.04}s`;
+        container.appendChild(span);
+    });
+</script>
+
+</body>
+</html>
